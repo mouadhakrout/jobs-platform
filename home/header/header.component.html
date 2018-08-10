@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+  <a class="navbar-brand" href="#">Khedma</a>
+  <ul class="navbar-nav">
+  </ul>
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{user.email}}
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" (click)="logOut()">Logout</a>
+      </div>
+    </div>
+  </ul>
+</nav>

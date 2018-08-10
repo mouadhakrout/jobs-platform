@@ -1,0 +1,30 @@
+<div *ngIf="!(authService.user | async)">
+<div class="main">
+  <div class="left">
+    <h1>Login</h1>
+    <p><i>To your Account</i></p>
+    <p class="or"><i>or</i></p>
+    <form [formGroup]="formdata" (ngSubmit) = "login(formdata.value)" >
+      <input type="text" class="fortextbox" required name="email" placeholder="email"
+             formControlName="email">
+      <input type="password" class="fortextbox" required name="password"
+             placeholder="password" formControlName="password">
+      <input type="submit" class="forsubmit" value="Log In">
+    </form>
+    <p class="forgot">Forgot Password?</p>
+
+  </div>
+  <div class="right">
+    <h1>Sign In</h1>
+    <p><i>with one of your social</i></p>
+    <p><i>profiles</i></p>
+    <div class="social">
+      <button class="twitter"><i class="fa fa-twitter" role="button"></i></button>
+      <button class="facebook"><i class="fa fa-facebook" role="button"></i></button>
+      <button class="google"><i class="fa fa-google" role="button"></i></button>
+      <p class="dont"><i>Don't have an account?</i></p>
+      <p><u>Register</u></p>
+    </div>
+  </div>
+</div>
+</div>

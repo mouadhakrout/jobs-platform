@@ -1,0 +1,9 @@
+<div *ngIf="!(authService.user | async)">
+<form (ngSubmit)="signup()" novalidate>
+  <input type="text" ngModel required placeholder="email">
+  <input type="password" ngModel placeholder="password">
+  <button type="submit" (click)="signup()" [disabled]="!email || !password">
+    Signup
+  </button>
+</form>
+</div>
